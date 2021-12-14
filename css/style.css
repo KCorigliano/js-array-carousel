@@ -7,7 +7,7 @@
 .container{
     border: 2px solid black;
     width: 1200px;
-    height: 350px;
+    height: 250px;
     display: flex;
     margin: 50px auto 0;
     background-color: darkcyan;
@@ -34,6 +34,12 @@
     margin: 0 auto;
     padding: 15px 0;
     background-color: darkcyan;
+}
+
+.circle-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .page{
@@ -75,4 +81,12 @@ a{
 
 .fa-redo{
     font-size: 15px;
+}
+
+.circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
 }

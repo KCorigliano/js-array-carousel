@@ -20,8 +20,20 @@ const buttonRight = document.getElementById('button-right');
 
 const buttonRefresh = document.querySelector('.refresh');
 
+const circleOne = document.querySelector('.first-circle');
+const circleTwo = document.querySelector('.second-circle');
+const circleThree = document.querySelector('.third-circle');
+const circleFour = document.querySelector('.fourth-circle');
+const circleFive = document.querySelector('.fifth-circle');
+
 titleHTML.innerHTML = titleArray[currentIndex];
 paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+if (currentIndex === 0){
+    circleOne.style.backgroundColor = 'chartreuse';
+} else {
+    circleOne.style.backgroundColor = 'white';
+}
 
 buttonLeft.addEventListener('click', function(){
     currentIndex--;
@@ -30,7 +42,57 @@ buttonLeft.addEventListener('click', function(){
     }
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
-})
+
+    circleOne.addEventListener('click', function(){
+        currentIndex === 0;
+    });
+    
+    circleTwo.addEventListener('click', function(){
+        currentIndex === 1;
+    });
+    
+    circleThree.addEventListener('click', function(){
+        currentIndex === 2;
+    });
+    
+    circleFour.addEventListener('click', function(){
+        currentIndex === 3;
+    });
+    
+    circleFive.addEventListener('click', function(){
+        currentIndex === 4;
+    });   
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
 
 buttonRight.addEventListener('click', function(){
     currentIndex++;
@@ -39,10 +101,91 @@ buttonRight.addEventListener('click', function(){
     }
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
-})
+
+    circleOne.addEventListener('click', function(){
+        currentIndex === 0;
+    });
+    
+    circleTwo.addEventListener('click', function(){
+        currentIndex === 1;
+    });
+    
+    circleThree.addEventListener('click', function(){
+        currentIndex === 2;
+    });
+    
+    circleFour.addEventListener('click', function(){
+        currentIndex === 3;
+    });
+    
+    circleFive.addEventListener('click', function(){
+        currentIndex === 4;
+    });
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
 
 buttonRefresh.addEventListener('click', function(){
     currentIndex = 0;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
-})
+    
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
+
