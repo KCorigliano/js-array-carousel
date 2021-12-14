@@ -6,7 +6,9 @@ const paragraphArray = [
     'Donec porta turpis at ligula dignissim, id tristique mauris molestie. Quisque at purus dapibus ligula blandit porta sed vel est. Fusce volutpat fermentum auctor. Ut eu est magna. Nam sollicitudin eget risus ut molestie. Fusce vulputate risus vitae magna hendrerit imperdiet. Proin feugiat lectus id accumsan fermentum. Sed ac arcu ut eros aliquam molestie. Quisque et pharetra nisl, et dignissim metus. Duis sit amet libero sit amet justo vehicula gravida. Aenean hendrerit purus quis ante sollicitudin ultrices. Vivamus a ligula vel ligula porttitor gravida eget at eros.',
     'Praesent tincidunt elit est, feugiat egestas odio sollicitudin eget. Curabitur mollis molestie dolor vitae venenatis. Maecenas tincidunt mi ut pulvinar semper. Vestibulum orci nunc, ullamcorper ac arcu vel, suscipit iaculis ante. Nulla eu scelerisque tellus. Vivamus imperdiet et augue et ultricies. Integer fringilla est ac lorem elementum, ut porttitor ante semper. Nunc pretium nunc tempus aliquet dictum. Vivamus at iaculis erat, sit amet iaculis lectus.',
     'Nullam ac lorem ac ante pretium congue quis quis sem. In a odio tempor, sodales quam eleifend, cursus lectus. Quisque sed nisi et ipsum rutrum dictum. Aliquam erat volutpat. Quisque faucibus elit sit amet tortor tempus iaculis. Fusce viverra lacinia porttitor. Sed ut suscipit est. Nam vel ipsum sed arcu elementum posuere. Nulla eu lectus eget magna laoreet congue at eu ante. Phasellus laoreet dolor nisi, at sodales nisi commodo ut.'
-]
+];
+
+const colorArray = ['cornflowerblue', 'Olive', 'Coral', 'Darkkhaki', 'Grey']
 
 let currentIndex = 0;
 
@@ -42,6 +44,7 @@ buttonLeft.addEventListener('click', function(){
     }
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     circleOne.addEventListener('click', function(){
         currentIndex === 0;
@@ -101,6 +104,7 @@ buttonRight.addEventListener('click', function(){
     }
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     circleOne.addEventListener('click', function(){
         currentIndex === 0;
@@ -157,6 +161,7 @@ buttonRefresh.addEventListener('click', function(){
     currentIndex = 0;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
     
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -193,6 +198,7 @@ circleOne.addEventListener('click', function(){
     currentIndex = 0;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -229,6 +235,7 @@ circleTwo.addEventListener('click', function(){
     currentIndex = 1;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -265,6 +272,7 @@ circleThree.addEventListener('click', function(){
     currentIndex = 2;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -301,6 +309,7 @@ circleFour.addEventListener('click', function(){
     currentIndex = 3;
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -337,6 +346,7 @@ circleFive.addEventListener('click', function(){
     currentIndex = 4; 
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
 
     if (currentIndex === 0){
         circleOne.style.backgroundColor = 'chartreuse';
@@ -367,4 +377,20 @@ circleFive.addEventListener('click', function(){
     } else{
         circleFive.style.backgroundColor = 'white';
     }
+});
+
+const clickMe = document.querySelector('.click-me');
+const middleContainer = document.querySelector('.middle-container');
+let counterClick = 0;
+
+
+
+clickMe.addEventListener('click', function(){
+    middleContainer.style.backgroundColor = colorArray[currentIndex];
+    if (counterClick % 2 === 0){
+        middleContainer.style.display="flex";
+    } else{
+        middleContainer.style.display="none";
+    }
+    counterClick++;
 });

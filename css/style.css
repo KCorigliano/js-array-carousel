@@ -23,6 +23,19 @@
     color: chartreuse;
 }
 
+.middle-container{
+    border: 2px solid black;
+    border-top: 0;
+    color: chartreuse;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: darkcyan;
+    display: none;
+}
+
 .button-container{
     border: 2px solid black;
     border-top: 0;
@@ -34,6 +47,7 @@
     margin: 0 auto;
     padding: 15px 0;
     background-color: darkcyan;
+    flex-wrap: wrap;
 }
 
 .circle-container{
@@ -64,6 +78,7 @@
     margin-bottom: 50px;
     cursor: pointer;
     border: 2px solid black;
+    font-weight: bold;
 }
 
 .break-line{
@@ -74,6 +89,13 @@
 
 a{
     cursor: pointer;
+}
+
+.click-me{
+    font-weight: bold;
+    cursor: pointer;
+    justify-self: flex-end;
+    font-size: 24px;
 }
 
 .fas{
