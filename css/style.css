@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid black;
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.sidebar{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page{
+    text-align: center;
+    width: 700px;
+}
+
+.break-line{
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+
+a{
+    cursor: pointer;
+}
+
+.fas{
+    font-size: 50px;
+}
+
+.title{
+    padding: 15px 0;
+}
+
+.paragraph{
+    padding: 15px 0;
+}
