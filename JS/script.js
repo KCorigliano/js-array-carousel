@@ -163,7 +163,7 @@ buttonRefresh.addEventListener('click', function(){
     } else{
         circleOne.style.backgroundColor = 'white';
     }
-
+    
     if (currentIndex === 1){
         circleTwo.style.backgroundColor = 'chartreuse';
     } else{
@@ -189,3 +189,182 @@ buttonRefresh.addEventListener('click', function(){
     }
 });
 
+circleOne.addEventListener('click', function(){
+    currentIndex = 0;
+    titleHTML.innerHTML = titleArray[currentIndex];    
+    paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
+
+circleTwo.addEventListener('click', function(){
+    currentIndex = 1;
+    titleHTML.innerHTML = titleArray[currentIndex];    
+    paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
+
+circleThree.addEventListener('click', function(){
+    currentIndex = 2;
+    titleHTML.innerHTML = titleArray[currentIndex];    
+    paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
+
+circleFour.addEventListener('click', function(){
+    currentIndex = 3;
+    titleHTML.innerHTML = titleArray[currentIndex];    
+    paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});
+
+circleFive.addEventListener('click', function(){
+    currentIndex = 4; 
+    titleHTML.innerHTML = titleArray[currentIndex];    
+    paragraphHTML.innerHTML = paragraphArray[currentIndex];
+
+    if (currentIndex === 0){
+        circleOne.style.backgroundColor = 'chartreuse';
+    } else{
+        circleOne.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        circleTwo.style.backgroundColor = 'chartreuse';
+    } else{
+        circleTwo.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        circleThree.style.backgroundColor = 'chartreuse';
+    } else{
+        circleThree.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        circleFour.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFour.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        circleFive.style.backgroundColor = 'chartreuse';
+    } else{
+        circleFive.style.backgroundColor = 'white';
+    }
+});

@@ -63,6 +63,7 @@
     border-radius: 25px;
     margin-bottom: 50px;
     cursor: pointer;
+    border: 2px solid black;
 }
 
 .break-line{
@@ -79,6 +80,12 @@ a{
     font-size: 50px;
 }
 
+.fa-arrow-circle-left,
+.fa-arrow-circle-right{
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
 .fa-redo{
     font-size: 15px;
 }
@@ -89,4 +96,5 @@ a{
     border-radius: 25px;
     background-color: white;
     cursor: pointer;
+    border: 2px black solid;
 }
