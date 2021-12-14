@@ -7,10 +7,12 @@
 .container{
     border: 2px solid black;
     width: 1200px;
-    height: 250px;
+    height: 350px;
     display: flex;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
+    background-color: darkcyan;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .sidebar{
@@ -18,17 +20,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: chartreuse;
+}
+
+.button-container{
+    border: 2px solid black;
+    border-top: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 15px 0;
+    background-color: darkcyan;
 }
 
 .page{
     text-align: center;
     width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    padding: 15px 0;
+}
+
+.paragraph{
+    padding: 15px 0;
+}
+
+.refresh{
+    background-color:chartreuse;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .break-line{
     width: 80%;
     margin: 0 auto;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid chartreuse;
 }
 
 a{
@@ -39,10 +73,6 @@ a{
     font-size: 50px;
 }
 
-.title{
-    padding: 15px 0;
-}
-
-.paragraph{
-    padding: 15px 0;
+.fa-redo{
+    font-size: 15px;
 }
