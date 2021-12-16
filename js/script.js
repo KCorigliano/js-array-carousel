@@ -12,31 +12,89 @@ const colorArray = ['cornflowerblue', 'Olive', 'Coral', 'Darkkhaki', 'Grey']
 
 let currentIndex = 0;
 
+// selezione degli elementi HTML
 const titleHTML = document.querySelector('.title');
-
 const paragraphHTML = document.querySelector('.paragraph');
-
 const buttonLeft = document.getElementById('button-left');
-
 const buttonRight = document.getElementById('button-right');
-
 const buttonRefresh = document.querySelector('.refresh');
+const clickMe = document.querySelector('.click-me');
+const middleContainer = document.querySelector('.middle-container');
 
+// selezione dei vari radio button
 const circleOne = document.querySelector('.first-circle');
 const circleTwo = document.querySelector('.second-circle');
 const circleThree = document.querySelector('.third-circle');
 const circleFour = document.querySelector('.fourth-circle');
 const circleFive = document.querySelector('.fifth-circle');
 
+// variabile del titolo e del paragrafo
 titleHTML.innerHTML = titleArray[currentIndex];
 paragraphHTML.innerHTML = paragraphArray[currentIndex];
 
+// stato iniziale dei radio button
 if (currentIndex === 0){
     circleOne.style.backgroundColor = 'chartreuse';
 } else {
     circleOne.style.backgroundColor = 'white';
 }
 
+// funzioni per i radio button
+function radioButtonClick (radio1, radio2, radio3, radio4, radio5){
+    radio1.addEventListener('click', function(){
+        currentIndex === 0;
+    });
+    
+    radio2.addEventListener('click', function(){
+        currentIndex === 1;
+    });
+    
+    radio3.addEventListener('click', function(){
+        currentIndex === 2;
+    });
+    
+    radio4.addEventListener('click', function(){
+        currentIndex === 3;
+    });
+    
+    radio5.addEventListener('click', function(){
+        currentIndex === 4;
+    });   
+}
+
+function radioButtonChange (radio1, radio2, radio3, radio4, radio5){
+    if (currentIndex === 0){
+        radio1.style.backgroundColor = 'chartreuse';
+    } else{
+        radio1.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 1){
+        radio2.style.backgroundColor = 'chartreuse';
+    } else{
+        radio2.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 2){
+        radio3.style.backgroundColor = 'chartreuse';
+    } else{
+        radio3.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 3){
+        radio4.style.backgroundColor = 'chartreuse';
+    } else{
+        radio4.style.backgroundColor = 'white';
+    }
+    
+    if (currentIndex === 4){
+        radio5.style.backgroundColor = 'chartreuse';
+    } else{
+        radio5.style.backgroundColor = 'white';
+    } 
+}
+
+// inizio degli eventi click della pagina 
 buttonLeft.addEventListener('click', function(){
     currentIndex--;
     if (currentIndex < 0){
@@ -46,55 +104,8 @@ buttonLeft.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    circleOne.addEventListener('click', function(){
-        currentIndex === 0;
-    });
-    
-    circleTwo.addEventListener('click', function(){
-        currentIndex === 1;
-    });
-    
-    circleThree.addEventListener('click', function(){
-        currentIndex === 2;
-    });
-    
-    circleFour.addEventListener('click', function(){
-        currentIndex === 3;
-    });
-    
-    circleFive.addEventListener('click', function(){
-        currentIndex === 4;
-    });   
-
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsClick = radioButtonClick(circleOne, circleTwo, circleThree, circleFour, circleFive);   
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 buttonRight.addEventListener('click', function(){
@@ -106,55 +117,8 @@ buttonRight.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    circleOne.addEventListener('click', function(){
-        currentIndex === 0;
-    });
-    
-    circleTwo.addEventListener('click', function(){
-        currentIndex === 1;
-    });
-    
-    circleThree.addEventListener('click', function(){
-        currentIndex === 2;
-    });
-    
-    circleFour.addEventListener('click', function(){
-        currentIndex === 3;
-    });
-    
-    circleFive.addEventListener('click', function(){
-        currentIndex === 4;
-    });
-
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsClick = radioButtonClick(circleOne, circleTwo, circleThree, circleFour, circleFive);   
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 buttonRefresh.addEventListener('click', function(){
@@ -162,36 +126,8 @@ buttonRefresh.addEventListener('click', function(){
     titleHTML.innerHTML = titleArray[currentIndex];    
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
-    
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+       
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 circleOne.addEventListener('click', function(){
@@ -200,35 +136,7 @@ circleOne.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 circleTwo.addEventListener('click', function(){
@@ -237,35 +145,7 @@ circleTwo.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 circleThree.addEventListener('click', function(){
@@ -274,35 +154,7 @@ circleThree.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 circleFour.addEventListener('click', function(){
@@ -311,35 +163,7 @@ circleFour.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
 circleFive.addEventListener('click', function(){
@@ -348,39 +172,9 @@ circleFive.addEventListener('click', function(){
     paragraphHTML.innerHTML = paragraphArray[currentIndex];
     middleContainer.style.backgroundColor = colorArray[currentIndex];
 
-    if (currentIndex === 0){
-        circleOne.style.backgroundColor = 'chartreuse';
-    } else{
-        circleOne.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 1){
-        circleTwo.style.backgroundColor = 'chartreuse';
-    } else{
-        circleTwo.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 2){
-        circleThree.style.backgroundColor = 'chartreuse';
-    } else{
-        circleThree.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 3){
-        circleFour.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFour.style.backgroundColor = 'white';
-    }
-    
-    if (currentIndex === 4){
-        circleFive.style.backgroundColor = 'chartreuse';
-    } else{
-        circleFive.style.backgroundColor = 'white';
-    }
+    let radioButtonsChange = radioButtonChange(circleOne, circleTwo, circleThree, circleFour, circleFive);
 });
 
-const clickMe = document.querySelector('.click-me');
-const middleContainer = document.querySelector('.middle-container');
 let counterClick = 0;
 
 clickMe.addEventListener('click', function(){
