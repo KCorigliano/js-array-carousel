@@ -383,8 +383,6 @@ const clickMe = document.querySelector('.click-me');
 const middleContainer = document.querySelector('.middle-container');
 let counterClick = 0;
 
-
-
 clickMe.addEventListener('click', function(){
     middleContainer.style.backgroundColor = colorArray[currentIndex];
     if (counterClick % 2 === 0){
